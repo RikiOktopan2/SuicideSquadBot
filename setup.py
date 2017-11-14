@@ -1,7 +1,7 @@
 from __future__ import with_statement
 import re
 ##
-# Setup.py Koplaxs ??
+# Setup.py ??
 # DON'T EDIT ??
 # Thanks ??
 ##
@@ -20,8 +20,8 @@ setup(
         version='0.9.9.9',
         description='May Waifu be with you...',
         license='BSD License',
-        author='Koplaxs',
-        author_email='zxchidden@gmail.com',
+        author='StreetPunk',
+        author_email='rikioktopan2@gmail.com',
         url='canseethefuture.org',
         keywords=['LINETCR'],
         classifiers=[
