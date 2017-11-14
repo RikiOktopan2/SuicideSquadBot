@@ -5,41 +5,42 @@ from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
-cl = LINETCR.LINE() #Luffy
+cl = LINETCR.LINE() #1
 cl.login(qr=True)
 cl.loginResult()
 
-ki = LINETCR.LINE() #Zorro
+ki = LINETCR.LINE() #2
 ki.login(qr=True)
 ki.loginResult()
 
-kk = LINETCR.LINE() #Sanji
+kk = LINETCR.LINE() #3
 kk.login(qr=True)
 kk.loginResult()
 
-kc = LINETCR.LINE() #Ussop
+kc = LINETCR.LINE() #4
 kc.login(qr=True)
 kc.loginResult()
 
-ks = LINETCR.LINE() #Chooper
+ks = LINETCR.LINE() #5
 ks.login(qr=True)
 ks.loginResult()
 
-print "login success plak"
+print "Berhasil Login"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""O҉n҉e҉ ҉P҉i҉e҉c҉e҉ ҉T҉e҉a҉m҉ ҉P҉r҉o҉t҉e҉c҉t҉
-Owner : ✰ЌờᎮḼΛẌֆ✰
--==================-
-◄]·♦·Menu For Public·♦·[►
+helpMessage ="""
+
+For Public
+
 [•]Adminlist
 [•]Ownerlist
 [•]Info Group
 [•]Welcome
 [•]Creator
 [•]Bot
-◄]·♦·Menu For Admin·♦·[►
+
+For Admin
 -==================-
 [•]Cancel
 [•]「Buka/Tutup」qr
