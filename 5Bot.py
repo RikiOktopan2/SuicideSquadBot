@@ -29,19 +29,39 @@ print "Berhasil Login"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""
+helpMessage ="""Suicide Squad Bot Menu
 
 For Public
 
 [•]Adminlist
-[•]Ownerlist
 [•]Info Group
 [•]Welcome
-[•]Creator
+[•]Owner
 [•]Bot
 
 For Admin
--==================-
+
+[•]Clear
+[•]Cek ban
+[•]Ban
+[•]Unban
+[•]LG (List Group)
+[•]mid @
+[•]Banned @
+[•]Nk @
+[•]Kill
+[•]Like temen
+[•]Bot Like
+[•]/invitemeto:
+[•]Message add:
+[•]Message change:
+[•]Spam:
+[•]Myname:
+[•]Allbio:
+[•]Bot add @
+[•]Admin add @
+[•]Suicide Squad
+[•]Suicide Squad Member
 [•]Cancel
 [•]「Buka/Tutup」qr
 [•]Mid Bot
@@ -54,7 +74,12 @@ For Admin
 [•]Absen/Respon
 [•]Banlist
 
-Street Punk
+
+=============
+Suicide Squad
+Owner : Riki
+Https://line.me/ti/p/~deadscreamer
+
 """
 KAC=[cl,ki,kk,kc,ks]
 #DEF1=[ki,kk,kc,ks,ka,kb,ko,ke,ku] Udah Ga Kepake(Boleh di apus)
@@ -91,11 +116,11 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"Punkers1 ",
-    "cName2":"Punkers2 ",
-    "cName3":"Punkers3 ",
-    "cName4":"Punkers4 ",
-    "cName5":"Punkers5 ",
+    "cName":"Mr. j ",
+    "cName2":"Dead Shoot ",
+    "cName3":"Harley Quinn ",
+    "cName4":"El Diablo ",
+    "cName5":"Killer Croc ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -391,7 +416,7 @@ def bot(op):
                     cl.updateGroup(X)
                 else:
                     cl.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Punkers1 gn " in msg.text):
+            elif ("Joker gn " in msg.text):
               if msg.from_ in admin:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
@@ -399,7 +424,7 @@ def bot(op):
                     ki.updateGroup(X)
                 else:
                     ki.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Punkers2 gn " in msg.text):
+            elif ("Dead Shoot gn " in msg.text):
               if msg.from_ in admin:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
@@ -407,7 +432,7 @@ def bot(op):
                     kk.updateGroup(X)
                 else:
                     kk.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Punkers3 gn " in msg.text):
+            elif ("Harley gn " in msg.text):
               if msg.from_ in admin:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
@@ -605,7 +630,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to, "Kelebihan batas :v")
     #-----------------=Selesai=------------------
-            elif msg.text in ["Squad"]: #Ngirim Semua Kontak Bot
+            elif msg.text in ["Suicide Squad Member"]: #Ngirim Semua Kontak Bot
               if msg.from_ in admin:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': mid}
@@ -1225,7 +1250,7 @@ def bot(op):
                 if wait["autoAdd"] == True: md+="[•]Auto Add [On]\n"
                 else:md+="[•]Auto Add [Off]\n"
                 if wait["commentOn"] == True: md+="[•]Comment [On]\n"
-                else:md+="[•]Comment [Off]\n*============*\nStreetPunk\n*============*"
+                else:md+="[•]Comment [Off]\n*============*\nSuicide Squad\n*============*"
                 cl.sendText(msg.to,md)
             elif "album merit " in msg.text:
                 gid = msg.text.replace("album merit ","")
@@ -1544,7 +1569,7 @@ def bot(op):
 
 #-----------------------------------------------
          #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["Kuy","Sini","Join kuy"]: #Panggil Semua Bot
+            elif msg.text in ["Suicide Squad","Sini","Join kuy"]: #Panggil Semua Bot
               if msg.from_ in owner:
                 G = cl.getGroup(msg.to)
                 ginfo = cl.getGroup(msg.to)
@@ -1725,7 +1750,7 @@ def bot(op):
             elif msg.text in ["Bot Like", "Bot like"]: #Semua Bot Ngelike Status Akun Utama
               if msg.from_ in owner:
                 print "[Command]Like executed"
-                cl.sendText(msg.to,"Tunggu sebentar....")
+                cl.sendText(msg.to,"Tunggu sebentar....\n kami tidak merespon perintah saat prosess like")
                 try:
                   likePost()
                 except:
@@ -1735,7 +1760,7 @@ def bot(op):
               if msg.from_ in owner:
                 print "[Command]Like executed"
                 cl.sendText(msg.to,"Tunggu sebentar.....")
-                cl.sendText(msg.to,"Sedang dalam prosess....")
+                cl.sendText(msg.to,"Sedang dalam prosess.... \nKami tidak merespon saat prosess like")
                 try:
                   autolike()
                 except:
@@ -1750,7 +1775,7 @@ def bot(op):
                     for tag in wait["blacklist"]:
                         matched_list+=filter(lambda str: str == tag, gMembMids)
                     if matched_list == []:
-                        random.choice(KAC).sendText(msg.to,"Selamat tinggal")
+                        random.choice(KAC).sendText(msg.to,"Dadah.....")
                         random.choice(KAC).sendText(msg.to,"Jangan masuk lagi􀨁􀆷devil smile􏿿")
                         return
                     for jj in matched_list:
@@ -1763,7 +1788,7 @@ def bot(op):
                             pass
         #----------------Fungsi Banned Kick Target Finish----------------------#                
 
-            elif "Ready op" in msg.text:
+            elif "Bantai" in msg.text:
               if msg.from_ in owner:
                 if msg.toType == 2:
                     print "ok"
@@ -1773,9 +1798,9 @@ def bot(op):
                     gs = kk.getGroup(msg.to)
                     gs = kc.getGroup(msg.to)
                     gs = ks.getGroup(msg.to)
-                    random.choice(KAC).sendText(msg.to,"Eh Kontol Ini Room apaan?")
-                    random.choice(KAC).sendText(msg.to,"Ratain aja lah\nRoom Ga Berguna..")
-                    random.choice(KAC).sendText(msg.to,"Jangan Baper yah Tollll;")
+                    random.choice(KAC).sendText(msg.to,"We Are Suicide Squad")
+                    random.choice(KAC).sendText(msg.to,"This is my style")
+                    random.choice(KAC).sendText(msg.to,"Bye... bye....")
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': mid}
                     random.choice(KAC).sendMessage(msg)
@@ -2008,7 +2033,7 @@ def bot(op):
   #------------------------End---------------------
 
   #-----------------End-----------
-            elif msg.text in ["Punk katakan hi"]:
+            elif msg.text in ["Squad katakan hi"]:
                 ki.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
                 kc.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
@@ -2043,12 +2068,12 @@ def bot(op):
        #-------------Fungsi Respon Start---------------------#
             elif msg.text in ["Absen","Absen bot","Absen dulu","Respon"]:
               if msg.from_ in admin:
-                cl.sendText(msg.to,"Punkers1 was here")
-                ki.sendText(msg.to,"Punkers2 was here")
-                kk.sendText(msg.to,"Punkers3 was here")
-                kc.sendText(msg.to,"Punkers4 was here")
-                ks.sendText(msg.to,"Punkers5 was here")
-                cl.sendText(msg.to,"Semua merespon skiap untuk Pogo bersama")
+                cl.sendText(msg.to,"Mr. J Was here")
+                ki.sendText(msg.to,"Dead Squad was here")
+                kk.sendText(msg.to,"Harley Quinn was here")
+                kc.sendText(msg.to,"El Diablo was here")
+                ks.sendText(msg.to,"Killer Croc was here")
+                cl.sendText(msg.to,"Suicide Squad Ready....")
       #-------------Fungsi Respon Finish---------------------#
                             
 
